@@ -1,12 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charSet="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Trading market dashboard for shares, forex, crypto, news, and strategy backtesting." />
-    <title>MarketPulse Pro</title>
-  </head>
-  <body>
-    <div id="root">{children}</div>
-  </body>
-</html>
+import type { Metadata } from 'next';
+import './globals.css';
+
+export const metadata: Metadata = {
+  title: 'MarketPulse Pro',
+  description:
+    'Trading market dashboard for shares, forex, crypto, news, and strategy backtesting.',
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}
